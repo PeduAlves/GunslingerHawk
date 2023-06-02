@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private Rigidbody bulletRigidbody;
 
     public float BulletSpeed = 40f;
+    public Rigidbody2D rb;
 
-    void Start()
-    {
-        bulletRigidbody = GetComponent<Rigidbody>();
-        bulletRigidbody.velocity = transform.forward * BulletSpeed;
+    void Start(){
+
+        rb.velocity = transform.right * BulletSpeed;
     }
 }
+
+
+
 
